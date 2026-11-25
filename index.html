@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>தமிழ் தேர்வகம் | TNPSC Learning Portal</title>
+<style>
+:root{--green:#176b4b;--deep:#104b37;--mint:#eaf5ef;--paper:#f7faf8;--ink:#18352a;--muted:#6c8177;--line:#dce9e1;--white:#fff;--gold:#e9b949}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Tamil",sans-serif}
+header{background:linear-gradient(120deg,var(--deep),#23845d);color:white;padding:18px max(5vw,20px);display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:5;box-shadow:0 3px 18px #123b2922}
+.brand{display:flex;align-items:center;gap:12px}.seal{width:44px;height:44px;border:2px solid #bde3ce;border-radius:50%;display:grid;place-items:center;font-size:22px}.brand h1{font-size:20px;margin:0}.brand small{color:#cce9d9}
+nav{display:flex;gap:7px;flex-wrap:wrap}nav button{border:0;background:transparent;color:#e9f6ee;padding:9px 12px;border-radius:9px;cursor:pointer;font:inherit}nav button:hover,nav button.active{background:#ffffff22}
+main{max-width:1120px;margin:28px auto;padding:0 18px}.hero{background:linear-gradient(120deg,#e4f3e9,#f6fbf7);border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:center}
+.eyebrow{color:var(--green);font-weight:700;font-size:13px;letter-spacing:.4px}.hero h2{font-size:clamp(26px,4vw,40px);line-height:1.25;margin:10px 0}.hero p{color:var(--muted);line-height:1.7}.hero-art{background:var(--green);color:white;border-radius:18px;padding:24px;text-align:center}.hero-art .symbol{font-size:58px}.hero-art strong{display:block;font-size:20px;margin-top:8px}
+.btn{border:0;background:var(--green);color:white;padding:11px 17px;border-radius:10px;font:inherit;font-weight:650;cursor:pointer}.btn:hover{background:var(--deep)}.btn.secondary{background:white;color:var(--green);border:1px solid var(--line)}
+.section-head{display:flex;align-items:end;justify-content:space-between;margin:28px 0 14px;gap:10px}.section-head h2{margin:0;font-size:22px}.muted{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 5px 16px #173e2a08}.card h3{margin:8px 0}.card p{color:var(--muted);font-size:14px;line-height:1.6}.icon{width:42px;height:42px;background:var(--mint);border-radius:12px;display:grid;place-items:center;font-size:22px}
+.statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.stat{background:white;border:1px solid var(--line);padding:15px;border-radius:14px}.stat b{display:block;color:var(--green);font-size:24px}.stat span{font-size:13px;color:var(--muted)}
+.panel{display:none}.panel.show{display:block}.subject-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.subject{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:white;border:1px solid var(--line);border-radius:13px;padding:15px;cursor:pointer;color:var(--ink);font:inherit}.subject:hover{border-color:var(--green);background:#f4faf6}.subject span:last-child{margin-left:auto;color:var(--muted);font-size:12px}
+.quizbox{max-width:760px}.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:14px}.question{font-size:20px;line-height:1.6;margin:18px 0}.option{display:block;width:100%;text-align:left;background:white;border:1px solid var(--line);padding:13px 15px;margin:9px 0;border-radius:11px;font:inherit;cursor:pointer;color:var(--ink)}.option:hover{border-color:var(--green)}.option.selected{border-color:var(--green);background:var(--mint)}.option.correct{border-color:#24945f;background:#e5f6eb}.option.wrong{border-color:#cf5b5b;background:#fff0f0}.feedback{padding:13px;border-radius:10px;margin:12px 0;background:var(--mint);line-height:1.6}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.note{line-height:1.8}.note h3{color:var(--green)}.tag{display:inline-block;background:var(--mint);color:var(--green);padding:4px 9px;border-radius:20px;font-size:12px;font-weight:700}
+footer{text-align:center;color:var(--muted);padding:30px 15px;font-size:13px}
+input[type=search]{padding:11px 13px;border:1px solid var(--line);border-radius:10px;font:inherit;width:min(100%,320px)}
+@media(max-width:760px){header{align-items:flex-start;flex-direction:column}nav{width:100%;overflow:auto;flex-wrap:nowrap}nav button{white-space:nowrap}.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.subject-list{grid-template-columns:1fr}.statrow{grid-template-columns:1fr 1fr}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.hero{padding:22px}.brand h1{font-size:18px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand"><div class="seal">📚</div><div><h1>தமிழ் தேர்வகம்</h1><small>TNPSC • அரசு தேர்வுகளுக்கான கற்றல் தளம்</small></div></div>
+ <nav aria-label="முதன்மை வழிசெலுத்தல்">
+  <button class="active" data-tab="home">முகப்பு</button><button data-tab="subjects">பாடங்கள்</button><button data-tab="quiz">வினாடி வினா</button><button data-tab="notes">குறிப்புகள்</button><button data-tab="about">தளம் பற்றி</button>
+ </nav>
+</header>
+<main>
+<section id="home" class="panel show">
+ <div class="hero">
+  <div><div class="eyebrow">உங்கள் இலக்கு • உங்கள் வெற்றி</div><h2>அரசுப் பணிக்கான பயணம்<br>இங்கே தொடங்கட்டும்!</h2><p>TNPSC Group 1, Group 2, Group 2A, Group 4 மற்றும் பிற தேர்வுகளுக்கான பாடங்கள், குறிப்புகள், பயிற்சி வினாக்கள் — அனைத்தும் ஒரே இடத்தில்.</p><button class="btn" onclick="showTab('quiz')">இன்றைய பயிற்சியைத் தொடங்கு →</button></div>
+  <div class="hero-art"><div class="symbol">🏛️</div><strong>கற்றல் • பயிற்சி • வெற்றி</strong><p style="color:#d8eee1">தினமும் சிறிது முன்னேற்றம்</p></div>
+ </div>
+ <div class="statrow"><div class="stat"><b>04+</b><span>முக்கிய TNPSC தேர்வுகள்</span></div><div class="stat"><b>06</b><span>முக்கிய பாடப்பிரிவுகள்</span></div><div class="stat"><b id="homeScore">0</b><span>உங்கள் சரியான பதில்கள்</span></div></div>
+ <div class="section-head"><div><h2>கற்றல் பிரிவுகள்</h2><div class="muted">உங்கள் தயாரிப்பை ஒழுங்குபடுத்துங்கள்</div></div></div>
+ <div class="grid">
+  <div class="card"><div class="icon">📖</div><h3>பாடக்குறிப்புகள்</h3><p>பாடவாரியாக முக்கிய குறிப்புகளைப் படியுங்கள்.</p><button class="btn secondary" onclick="showTab('notes')">குறிப்புகளைப் பார்</button></div>
+  <div class="card"><div class="icon">✍️</div><h3>மாதிரி வினாக்கள்</h3><p>தேர்வு முறையில் வினாக்களுக்கு விடையளியுங்கள்.</p><button class="btn secondary" onclick="showTab('quiz')">பயிற்சி செய்</button></div>
+  <div class="card"><div class="icon">🗂️</div><h3>பாடப்பிரிவுகள்</h3><p>தமிழ், வரலாறு, அரசியல், அறிவியல் உள்ளிட்டவை.</p><button class="btn secondary" onclick="showTab('subjects')">பாடங்களைப் பார்</button></div>
+ </div>
+</section>
+<section id="subjects" class="panel">
+ <div class="section-head"><div><h2>பாடப்பிரிவுகள்</h2><div class="muted">அனைத்து TNPSC தேர்வுகளுக்கும் பயன்படும் அடிப்படைப் பிரிவுகள்</div></div></div>
+ <div class="subject-list" id="subjectList"></div>
+</section>
+<section id="quiz" class="panel">
+ <div class="section-head"><div><h2>தினசரி வினாடி வினா</h2><div class="muted">மாதிரி பயிற்சி • ஒவ்வொரு வினாவிற்கும் ஒரு மதிப்பெண்</div></div><span class="tag">பயிற்சி முறை</span></div>
+ <div class="card quizbox"><div class="qmeta"><span id="qCount">வினா 1 / 8</span><span id="score">மதிப்பெண்: 0</span></div><div id="question" class="question"></div><div id="options"></div><div id="feedback"></div><div class="toolbar"><button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>அடுத்த வினா →</button><button class="btn secondary" onclick="restartQuiz()">மீண்டும் தொடங்கு</button></div></div>
+</section>
+<section id="notes" class="panel">
+ <div class="section-head"><div><h2>பாடக்குறிப்புகள்</h2><div class="muted">தொடக்கநிலை மாதிரிக் குறிப்புகள்</div></div><input type="search" id="noteSearch" placeholder="குறிப்புகளைத் தேடுங்கள்..." oninput="filterNotes()"></div>
+ <div id="notesList" class="grid"></div>
+</section>
+<section id="about" class="panel">
+ <div class="card note"><span class="tag">தமிழ் தேர்வகம்</span><h2>உங்கள் TNPSC தயாரிப்புக்கான எளிய தளம்</h2><p>இந்தத் தளம் TNPSC தேர்வுகளுக்கான சுயபயிற்சியை எளிதாக்கும் வகையில் வடிவமைக்கப்பட்ட ஆரம்பப் பதிப்பு. இதில் பாடப்பிரிவுகள், மாதிரி வினாடி வினா, தொடக்கநிலைக் குறிப்புகள் உள்ளன.</p><h3>முக்கிய குறிப்பு</h3><p>இங்கே உள்ள வினாக்களும் குறிப்புகளும் மாதிரி உள்ளடக்கம் மட்டுமே. அதிகாரப்பூர்வ பாடத்திட்டம், சமீபத்திய அறிவிப்புகள், தேர்வு தேதிகள் மற்றும் இறுதி விடைகளை TNPSC அதிகாரப்பூர்வ இணையதளத்தில் சரிபார்க்கவும்.</p><p><a href="https://www.tnpsc.gov.in/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">TNPSC அதிகாரப்பூர்வ இணையதளம் ↗</a></p></div>
+</section>
+</main>
+<footer>© 2026 தமிழ் தேர்வகம் • கற்றலைத் தொடர்ந்து செய்யுங்கள்! 🌱</footer>
+<script>
+const subjects=[
+ ['தமிழ்','📘','இலக்கணம், இலக்கியம், ஆசிரியர்கள் மற்றும் நூல்கள்'],
+ ['பொது அறிவு','🌍','இந்தியா மற்றும் தமிழ்நாடு தொடர்பான பொது அறிவு'],
+ ['இந்திய அரசியலமைப்பு','⚖️','அரசியலமைப்பு, அடிப்படை உரிமைகள், ஆட்சி அமைப்பு'],
+ ['இந்திய வரலாறு','🏺','பண்டைய, இடைக்கால மற்றும் நவீன இந்திய வரலாறு'],
+ ['தமிழ்நாடு வரலாறு','🏛️','தமிழர் பண்பாடு, இயக்கங்கள் மற்றும் சமூக சீர்திருத்தம்'],
+ ['அறிவியல்','🔬','இயற்பியல், வேதியியல், உயிரியல் மற்றும் அன்றாட அறிவியல்'],
+ ['கணிதம்','➗','சதவீதம், விகிதம், சராசரி மற்றும் எண் கணிதம்'],
+ ['புவியியல்','🗺️','இந்தியா, தமிழ்நாடு, காலநிலை மற்றும் வளங்கள்']
+];
+document.getElementById('subjectList').innerHTML=subjects.map(s=>`<button class="subject" onclick="openSubject('${s[0]}')"><span class="icon">${s[1]}</span><span><b>${s[0]}</b><br><small class="muted">${s[2]}</small></span><span>பார் →</span></button>`).join('');
+const notes=[
+ ['தமிழ் இலக்கணம்','எழுத்து, சொல், பொருள், யாப்பு, அணி ஆகியவை தமிழ் இலக்கணத்தின் முக்கியப் பிரிவுகள்.','தமிழ்'],
+ ['இந்திய அரசியலமைப்பு','இந்திய அரசியலமைப்பு 26 நவம்பர் 1949 அன்று ஏற்றுக்கொள்ளப்பட்டது. 26 ஜனவரி 1950 அன்று நடைமுறைக்கு வந்தது.','அரசியல்'],
+ ['இந்திய வரலாறு','இந்திய தேசிய காங்கிரஸ் 1885ஆம் ஆண்டு தொடங்கப்பட்டது. அதன் முதல் கூட்டம் பம்பாயில் நடைபெற்றது.','வரலாறு'],
+ ['அடிப்படை கணிதம்','சராசரி = அனைத்து மதிப்புகளின் கூடுதல் ÷ மதிப்புகளின் எண்ணிக்கை.','கணிதம்'],
+ ['அறிவியல்','ஒளிச்சேர்க்கையின் போது தாவரங்கள் சூரிய ஒளியைப் பயன்படுத்தி உணவைத் தயாரிக்கின்றன.','அறிவியல்'],
+ ['தமிழ்நாடு','தமிழ்நாட்டின் தலைநகரம் சென்னை. தமிழ்நாடு 1969ஆம் ஆண்டு அந்தப் பெயரைப் பெற்றது.','பொது அறிவு']
+];
+function renderNotes(list=notes){document.getElementById('notesList').innerHTML=list.map(n=>`<article class="card note"><span class="tag">${n[2]}</span><h3>${n[0]}</h3><p>${n[1]}</p></article>`).join('')||'<p>குறிப்புகள் எதுவும் கிடைக்கவில்லை.</p>'}
+renderNotes();
+function filterNotes(){let q=document.getElementById('noteSearch').value.toLowerCase();renderNotes(notes.filter(n=>n.join(' ').toLowerCase().includes(q)))}
+function openSubject(name){showTab('notes');document.getElementById('noteSearch').value=name;filterNotes();if(!notes.some(n=>n.join(' ').includes(name)))document.getElementById('notesList').innerHTML=`<div class="card"><h3>${name}</h3><p>இந்தப் பாடத்திற்கான விரிவான குறிப்புகள் அடுத்த உள்ளடக்கப் புதுப்பிப்பில் சேர்க்கப்படும்.</p></div>`}
+function showTab(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('show',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>showTab(b.dataset.tab)));
+const questions=[
+ {q:'இந்திய அரசியலமைப்பு எப்போது நடைமுறைக்கு வந்தது?',o:['15 ஆகஸ்ட் 1947','26 ஜனவரி 1950','26 நவம்பர் 1949','2 அக்டோபர் 1950'],a:1,e:'26 ஜனவரி 1950 அன்று இந்திய அரசியலமைப்பு நடைமுறைக்கு வந்தது.'},
+ {q:'திருக்குறளில் மொத்தம் எத்தனை குறள்கள் உள்ளன?',o:[' સ1000','1330','1200','1500'],a:1,e:'திருக்குறளில் 133 அதிகாரங்களும், ஒவ்வொரு அதிகாரத்திற்கும் 10 குறள்களும் உள்ளன.'},
+ {q:'இந்திய தேசிய காங்கிரஸ் தொடங்கப்பட்ட ஆண்டு எது?',o:['1885','1905','1857','1942'],a:0,e:'இந்திய தேசிய காங்கிரஸ் 1885ஆம் ஆண்டு தொடங்கப்பட்டது.'},
+ {q:'சராசரியைக் கணக்கிடும் முறை எது?',o:['கூடுதல் × எண்ணிக்கை','கூடுதல் ÷ எண்ணிக்கை','பெரிய எண் − சிறிய எண்','கூடுதல் + எண்ணிக்கை'],a:1,e:'சராசரி = மதிப்புகளின் கூடுதல் ÷ மதிப்புகளின் எண்ணிக்கை.'},
+ {q:'தமிழ்நாட்டின் தலைநகரம் எது?',o:['மதுரை','கோயம்புத்தூர்','சென்னை','திருச்சி'],a:2,e:'சென்னை தமிழ்நாட்டின் தலைநகரமாகும்.'},
+ {q:'ஒளிச்சேர்க்கைக்கு அவசியமானது எது?',o:['சூரிய ஒளி','மணல் மட்டும்','உப்பு மட்டும்','ஒலி'],a:0,e:'ஒளிச்சேர்க்கைக்கு சூரிய ஒளி, நீர் மற்றும் கார்பன் டை ஆக்சைடு தேவை.'},
+ {q:'இந்திய அரசியலமைப்பு ஏற்றுக்கொள்ளப்பட்ட நாள் எது?',o:['26 நவம்பர் 1949','26 ஜனவரி 1950','15 ஆகஸ்ட் 1947','1 மே 1960'],a:0,e:'அரசியலமைப்பு நிர்ணய சபையால் 26 நவம்பர் 1949 அன்று ஏற்றுக்கொள்ளப்பட்டது.'},
+ {q:'ஒரு டஜன் என்பது எத்தனை?',o:['10','12',' साह15','20'],a:1,e:'ஒரு டஜன் என்பது 12 ஆகும்.'}
+];
+let qi=0,points=0,answered=false,correctTotal=Number(localStorage.getItem('tnpscCorrect')||0);
+document.getElementById('homeScore').textContent=correctTotal;
+function loadQuestion(){answered=false;let q=questions[qi];document.getElementById('qCount').textContent=`வினா ${qi+1} / ${questions.length}`;document.getElementById('score').textContent=`மதிப்பெண்: ${points}`;document.getElementById('question').textContent=q.q;document.getElementById('feedback').innerHTML='';document.getElementById('nextBtn').disabled=true;document.getElementById('nextBtn').textContent=qi===questions.length-1?'முடிவைக் காண்க':'அடுத்த வினா →';document.getElementById('options').innerHTML=q.o.map((o,i)=>`<button class="option" onclick="choose(${i})">${String.fromCharCode(அ=65+i)}. ${o}</button>`).join('')}
+function choose(i){if(answered)return;answered=true;let q=questions[qi],opts=[...document.querySelectorAll('.option')];opts.forEach((b,j)=>{b.disabled=true;if(j===q.a)b.classList.add('correct');if(j===i&&i!==q.a)b.classList.add('wrong')});if(i===q.a){points++;correctTotal++;localStorage.setItem('tnpscCorrect',correctTotal);document.getElementById('homeScore').textContent=correctTotal;document.getElementById('score').textContent=`மதிப்பெண்: ${points}`;document.getElementById('feedback').innerHTML=`<div class="feedback">✅ சரியான விடை! ${q.e}</div>`}else document.getElementById('feedback').innerHTML=`<div class="feedback">📘 சரியான விடை: ${q.o[q.a]}. ${q.e}</div>`;document.getElementById('nextBtn').disabled=false}
+function nextQuestion(){if(!answered)return;if(qi<questions.length-1){qi++;loadQuestion()}else{document.querySelector('.quizbox').innerHTML=`<div style="text-align:center;padding:22px"><div style="font-size:48px">🎉</div><h2>பயிற்சி நிறைவடைந்தது!</h2><p>உங்கள் மதிப்பெண்: <b>${points} / ${questions.length}</b></p><p class="muted">மீண்டும் முயற்சி செய்து உங்கள் மதிப்பெண்ணை உயர்த்துங்கள்.</p><button class="btn" onclick="restartQuiz()">மீண்டும் தொடங்கு</button></div>`}}
+function restartQuiz(){qi=0;points=0;document.querySelector('.quizbox').innerHTML='<div class="qmeta"><span id="qCount"></span><span id="score"></span></div><div id="question" class="question"></div><div id="options"></div><div id="feedback"></div><div class="toolbar"><button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>அடுத்த வினா →</button><button class="btn secondary" onclick="restartQuiz()">மீண்டும் தொடங்கு</button></div>';loadQuestion()}
+loadQuestion();
+</script>
+</body></html>
